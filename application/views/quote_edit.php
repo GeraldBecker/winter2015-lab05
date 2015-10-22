@@ -1,8 +1,11 @@
 <div class="row">
-    <form action="/admin/confirm">
+    <div class="errors">{message}</div>
+    <form action="/admin/confirm" method="post">
         {fid}
         {fwho}
         {fmug}
         {fwhat}
+        
+        {fsubmit}
     </form>
 </div>
