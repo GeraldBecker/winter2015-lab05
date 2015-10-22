@@ -11,7 +11,7 @@ class Welcome extends Application {
 
     function __construct()
     {
-	parent::__construct();
+    parent::__construct();
     }
 
     //-------------------------------------------------------------
@@ -20,9 +20,15 @@ class Welcome extends Application {
 
     function index()
     {
-	$this->data['pagebody'] = 'justone';    // this is the view we want shown
-	$this->data = array_merge($this->data, (array) $this->quotes->last());
-	$this->render();
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        $choice = rand(1, $this->quotes->size());
+        $this->data = array_merge($this->data, (array) $this->quotes->get($choice));
+        
+        //load the star rating system
+        $this->caboose->needed('jrating','hollywood');
+        $this->data['average'] = ($this->data['vote_count'] > 0) ? 
+            ($this->data['vote_total'] / $this->data['vote_count']) : 0;
+        $this->render();
     }
 
 }
