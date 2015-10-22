@@ -6,7 +6,8 @@ if (!defined('BASEPATH'))
 // the menu basics (text navbar)
 $config['menu_choices'] = array(
     'menudata' => array(
-	array('name' => "View 'Em", 'link' => '/viewer'),
+            array('name' => "View 'Em", 'link' => '/viewer'),
+            array('name' => "Change 'Em", 'link' => '/admin'),
         )
     );
 
@@ -19,7 +20,7 @@ $config['menu_choices'] = array(
   | URL to your CodeIgniter root. Typically this will be your base URL,
   | WITH a trailing slash:
   |
-  |	http://example.com/
+  | http://example.com/
   |
   | If this is not set then CodeIgniter will guess the protocol, domain and
   | path to your installation.
@@ -48,11 +49,11 @@ $config['index_page'] = '';
   | URI string.  The default setting of 'AUTO' works for most servers.
   | If your links do not seem to work, try one of the other delicious flavors:
   |
-  | 'AUTO'			Default - auto detects
-  | 'PATH_INFO'		Uses the PATH_INFO
-  | 'QUERY_STRING'	Uses the QUERY_STRING
-  | 'REQUEST_URI'		Uses the REQUEST_URI
-  | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
+  | 'AUTO'          Default - auto detects
+  | 'PATH_INFO'     Uses the PATH_INFO
+  | 'QUERY_STRING'  Uses the QUERY_STRING
+  | 'REQUEST_URI'       Uses the REQUEST_URI
+  | 'ORIG_PATH_INFO'    Uses the ORIG_PATH_INFO
   |
  */
 $config['uri_protocol'] = 'AUTO';
@@ -181,11 +182,11 @@ $config['directory_trigger'] = 'd'; // experimental not currently in use
   | You can enable error logging by setting a threshold over zero. The
   | threshold determines what gets logged. Threshold options are:
   |
-  |	0 = Disables logging, Error logging TURNED OFF
-  |	1 = Error Messages (including PHP errors)
-  |	2 = Debug Messages
-  |	3 = Informational Messages
-  |	4 = All Messages
+  | 0 = Disables logging, Error logging TURNED OFF
+  | 1 = Error Messages (including PHP errors)
+  | 2 = Debug Messages
+  | 3 = Informational Messages
+  | 4 = All Messages
   |
   | For a live site you'll usually only enable Errors (1) to be logged otherwise
   | your log files will fill up very fast.
@@ -242,17 +243,17 @@ $config['encryption_key'] = '';
   | Session Variables
   |--------------------------------------------------------------------------
   |
-  | 'sess_cookie_name'		= the name you want for the cookie
-  | 'sess_expiration'			= the number of SECONDS you want the session to last.
+  | 'sess_cookie_name'      = the name you want for the cookie
+  | 'sess_expiration'           = the number of SECONDS you want the session to last.
   |   by default sessions last 7200 seconds (two hours).  Set to zero for no expiration.
-  | 'sess_expire_on_close'	= Whether to cause the session to expire automatically
+  | 'sess_expire_on_close'  = Whether to cause the session to expire automatically
   |   when the browser window is closed
-  | 'sess_encrypt_cookie'		= Whether to encrypt the cookie
-  | 'sess_use_database'		= Whether to save the session data to a database
-  | 'sess_table_name'			= The name of the session database table
-  | 'sess_match_ip'			= Whether to match the user's IP address when reading the session data
-  | 'sess_match_useragent'	= Whether to match the User Agent when reading the session data
-  | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
+  | 'sess_encrypt_cookie'       = Whether to encrypt the cookie
+  | 'sess_use_database'     = Whether to save the session data to a database
+  | 'sess_table_name'           = The name of the session database table
+  | 'sess_match_ip'         = Whether to match the user's IP address when reading the session data
+  | 'sess_match_useragent'  = Whether to match the User Agent when reading the session data
+  | 'sess_time_to_update'       = how many seconds between CI refreshing Session Information
   |
  */
 $config['sess_cookie_name'] = 'ci_session';
